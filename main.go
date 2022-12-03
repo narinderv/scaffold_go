@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-const MAX_LEN int = 10
+// maxLen defines the maximum length of the Fibo series returned from the function
+const maxLen int = 10
 
 func main() {
 
@@ -26,10 +27,10 @@ func greeting(s string) string {
 }
 
 func printFiboSeries(num int) ([]int, error) {
-	var fiboArr [MAX_LEN]int
+	var fiboArr [maxLen]int
 
-	if num > MAX_LEN {
-		return fiboArr[:], fmt.Errorf("only a maximum of %d numbers can be printed", MAX_LEN)
+	if num > maxLen {
+		return fiboArr[:], fmt.Errorf("only a maximum of %d numbers can be printed", maxLen)
 	} else if num < 1 {
 		return fiboArr[:], fmt.Errorf("max. count cannot be zero")
 	}
